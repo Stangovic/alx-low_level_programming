@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _abs - check the code for Holberton School students.
+ * _abs - check the code for abs
  *
- * @n: is an integer argument
+ * @n: argument
  *
  * Return: Always 0.
  */

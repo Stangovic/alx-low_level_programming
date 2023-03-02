@@ -1,6 +1,14 @@
-#include<bits/stdc++.h>
+#iinclude "main.h"
 
 int _putchar(char c);
+
+/**
+ * print_sign - to print a sighn
+ *
+ * @n: argument
+ *
+ * Return: Always 0.
+ */
 
 int print_sign(int n)
 {

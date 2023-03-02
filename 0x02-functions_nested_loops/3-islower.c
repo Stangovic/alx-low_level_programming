@@ -1,5 +1,12 @@
-#include<bits/stdc++.h>
+#include "main.h"
 
+/**
+ * _islower - to print
+ *
+ * @c:  parameter
+ *
+ * Return: Always 0.
+ */
 
 int _islower(int c)
 {

@@ -1,4 +1,12 @@
-#include<bits/stdc++.h>
+#include "main.h"
+
+/**
+ * _isalpha - check if is alphabet
+ *
+ * @c: argument
+ *
+ * Return: Always 0.
+ */
 
 int _isalpha(int c)
 {

@@ -1,24 +1,27 @@
-#include"main.h"
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int _putchar(char c);
 
 /**
- * print_diagonal - print diagonal line
- * @n: int parameter size
- * Return: void
+ * print_last_digit - Start herw
+ *
+ * @last: a3gument
+ *
+ * Return: Always 0.
  */
 
-void print_diagonal(int n)
+int print_last_digit(int last)
 {
-	int i;
-	int m = n;
+	int l = last % 10;
 
-	if (n <= 0)
-		_putchar('\n');
-
-	for (; n > 0; n--)
+	if (l >= 0)
 	{
-		for (i = 0; i < m - n; i++)
-			_putchar(' ');
-		_putchar('\\');
-		_putchar('\n');
+		_putchar(l + '0');
+		return (l);
 	}
+
+	_putchar(-l + '0');
+	return (-l);
 }
