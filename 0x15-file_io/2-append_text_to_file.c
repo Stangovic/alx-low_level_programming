@@ -1,21 +1,31 @@
 #include "main.h"
 
-int append_text_to_file(const char *filename, char *text_content) 
-
+/**
+ * append_text_to_file - Appends
+ * @filename: A pointer to the name of the file.
+ * @text_content: The string 
+ * Return: 1
+ */
+int append_text_to_file(const char *filename, char *text_content)
 {
-    if (filename == NULL) {
-        return -1;
-    }
+	int a, w, sin = 0;
 
-    FILE *file = fopen(filename, "a");
-    if (file == NULL) {
-        return -1;
-    }
+	if (filename == NULL)
+		return (-1);
 
-    if (text_content != NULL) {
-        fprintf(file, "%s", text_content);
-    }
+	if (text_content != NULL)
+	{
+		for (sin = 0; text_content[sin];)
+			sin++;
+	}
 
-    fclose(file);
-    return 1;
+	a = open(filename, O_WRONLY | O_APPEND);
+	w = write(a, text_content, sin);
+
+	if (a == -1 || w == -1)
+		return (-1);
+
+	close(a);
+
+	return (1);
 }
