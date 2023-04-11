@@ -1,7 +1,8 @@
 #include "main.h"
-#include <stdio.h>
 
-int append_text_to_file(const char *filename, char *text_content) {
+int append_text_to_file(const char *filename, char *text_content) 
+
+{
     if (filename == NULL) {
         return -1;
     }
