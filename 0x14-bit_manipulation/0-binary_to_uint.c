@@ -1,28 +1,23 @@
 #include "main.h"
 
-/**
- * binary_to_uint - Converts a binary 
- * @b: A pointer
- */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int bin = 0, hex = 1;
-	int ben;
+    unsigned int result = 0;
+    int i;
 
-	if (b == '\0')
-		return (0);
+    if (b == NULL)
+        return 0;
 
-	for (ben = 0; b[ben];)
-		ben++;
+    for (i = 0; b[i] != '\0'; i++) {
+        if (b[i] == '0') {
+            result <<= 1;
+        } else if (b[i] == '1') {
+            result <<= 1;
+            result |= 1;
+        } else {
+            return 0;
+        }
+    }
 
-	for (ben -= 1; ben >= 0; ben--)
-	{
-		if (b[ben] != '0' && b[ben] != '1')
-			return (0);
-
-		bin += (b[ben] - '0') * hex;
-		hex *= 2;
-	}
-
-	return (bin);
+    return result;
 }
