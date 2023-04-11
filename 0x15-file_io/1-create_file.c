@@ -1,4 +1,6 @@
 #include "main.h"
+#include <fcntl.h>
+#include <unistd.h>
 
 int create_file(const char *filename, const char *text_content) 
 {
